@@ -1,0 +1,21 @@
+<h2>Add A New Task</h2>
+
+<p>Task:</p>
+<input type="text" id="TaskTitle" />
+
+<br>
+
+<p>Assign Team Member:</p>
+<span>First Name</span><input type="text" id="FirstName">
+<span>Last Name</span><input type="text" id="LastName">
+
+<br>
+<label for="Description">Description</label>
+<textarea id="Description" name="Description" rows="5" cols="100"></textarea>
+
+<br>
+
+<p>Due Date</p>
+<input type="date" id="DueDate"/>
+
+<button (click)="CreateTask()">Save</button>

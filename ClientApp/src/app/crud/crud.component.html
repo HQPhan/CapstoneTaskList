@@ -1,0 +1,16 @@
+<div style="border: 1px solid black;" *ngFor="let td of todos; let i = index">
+  <div id="display{{td.Id}}">
+      <p>Id: {{td.Id}}</p>
+      <p>Task: {{td.TaskTitle}}</p>
+      <p>First Name: {{td.FirstName}}</p>
+      <p>Last Name: {{td.LastName}}</p>
+      <p>Description: {{td.Description}}</p>
+      <p>Is Completed: {{td.IsCompleted}}</p>
+      <button (click)="DeleteEntry(td.Id, i)">Delete {{td.Id}}</button>
+  </div>
+  <app-update-task id="edit{{td.Id}}" style="display: none;" [Id]=td.Id></app-update-task>
+
+  <button (click)="EditTask(td.Id)">Edit Task #{{td.Id}}</button>
+</div>
+
+<app-create-task></app-create-task>
